@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    height: 110px;
+}
+
+.body {
+    height: calc(100vh - 110px);
+}
+
+
