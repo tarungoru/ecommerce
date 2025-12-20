@@ -55,7 +55,7 @@
     color: #878787;
     font-size: 14px;
     text-decoration: line-through;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--primary-font);
 }
 
 .checked {
@@ -66,13 +66,13 @@
 .price-text {
     font-size: 18px;
     font-weight: 600;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--primary-font);
 }
 
 .product-text {
     font-size: 16px;
     font-weight: 500;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--primary-font);
 
 }
 

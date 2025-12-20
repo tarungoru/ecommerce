@@ -5,11 +5,151 @@
         </div>
         <div class="product-description">
             <div class="product-text">Nuvvula Karam</div>
+            <div class="rating-reviews">
+                <span class="rating">
+                    <span>4.0</span>
+                    <span class="fa fa-star checked"></span>
+                </span>
+                <span class="reviews">11,597 Ratings & 1,580 Reviews</span>
+            </div>
             <span class="price-text">₹190<span class="discount-text">₹250</span> <span class="discount">17% off</span></span>
-            <span class="rating">
-                <span>4.0</span>
-                <span class="fa fa-star checked"></span>
+            <div>
+                <hr>
+            </div>
+            <div class="weight-container">
+                <span class="weight-text">Weight</span>
+                <div class="weight-btn-container">
+                    <div class="weight-button" [class.active-btn]="activeWeight === '250g'" (click)="setActiveWeight('250g')">250g</div>
+                    <div class="weight-button inactive-btn" [class.active-btn]="activeWeight === '500g'" (click)="setActiveWeight('500g')">500g</div>
+                    <div class="weight-button" [class.active-btn]="activeWeight === '1kg'" (click)="setActiveWeight('1kg')">1kg</div>
+                </div>
+            </div>
+            <div class="shipping-content">
+                <span class="shipping-text">Free shipping on orders above 999/-</span>
+                <span class="shipping-text">Cash on Delivery eligible for purchases above ₹499</span>
+                <span class="shipping-text">5% off on orders above Rs. 1499</span>
+            </div>
+
+            <div class="quantity-container">
+                <span class="quantity-text">Quantity</span>
+                <div class="add-remove-container">
+                    <div class="common-btn" (click)="decrementQuantity()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><title>Minus</title><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                    <input class="input-btn" type="text" [(ngModel)]="quantity"/>
+                    <div class="common-btn" (click)="incrementQuantity()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><title>Plus</title><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                </div>
+            </div>
+
+            <div class="add-to-buy-container">
+                <div class="add-to-cart-btn">Add to Cart</div>
+                <div class="buy-now-btn">Buy Now</div>
+            </div>
+            <span class="payment-desc">
+                We accept multiple secure payment options.
             </span>
+            <div class="image-row">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/visa_1_color_card.svg?v=1729764746">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/upi_color_card.svg?v=1729764795">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/googlepay_color_card.svg?v=1729764830">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/mastercard_color_card.svg?v=1729764861">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/paytm_color_card.svg?v=1729764888">
+                <img class="image-payment" src="https://cdn.shopify.com/s/files/1/0271/5703/7149/files/phonepe_color_card.svg?v=1729764974">
+            </div>
+            <div class="product-details-text">
+                 Indulge in the nutty and aromatic flavors of Sumadhura Nuvvula Karam. This exceptional spice blend combines the rich taste of sesame seeds (nuvvulu) with a mix of traditional Indian spices, creating a savory and flavorful delight. Perfect for enhancing the flavor of your meals, this karam (spice powder) embodies the rich culinary heritage of South Indian cuisine.
+            </div>
+            <div class="share-container">
+                <span class="share-text">Share this product</span>
+                <div class="button-container">
+                    <a class="whatsapp">
+                        <img class="icon" src="https://platform-cdn.sharethis.com/img/whatsapp-white.svg">
+                        <span class="whatsapp-share">Share</span>
+                    </a>
+                    <a class="facebook">
+                        <img class="icon" src="https://platform-cdn.sharethis.com/img/facebook-white.svg">
+                        <span class="facebook-share">Share</span>
+                    </a>
+                    <a class="twitter">
+                        <img class="icon" src="https://platform-cdn.sharethis.com/img/twitter-white.svg">
+                        <span class="twitter-share">Share</span>
+                    </a>
+                </div>
+            </div>
+            <div style="border: 1px solid #f0f0f0;">
+                <h2 class="rating-text">Ratings & Reviews</h2>
+                <div class="rating-summary">
+                    <span class="text">4.4 ★</span>
+                    <div class="rating-content">
+                        <ul>
+                            <li>5 ★</li>
+                            <li>4 ★</li>
+                            <li>3 ★</li>
+                            <li>2 ★</li>
+                            <li>1 ★</li>
+                        </ul>
+                        <ul class="reviews-container" style="gap: 2px;">
+                            <li class="progress-bar">
+                                <div class="progress">
+                                    <span class="common-progress" [ngStyle]="{'width' : '70%', 'background-color': '#388e3c'}"></span>
+                                </div>
+                            </li>
+                            <li class="progress-bar">
+                                <div class="progress">
+                                    <span class="common-progress" [ngStyle]="{'width' : '50%', 'background-color': '#388e3c'}"></span>
+                                </div>
+                            </li>
+                            <li class="progress-bar">
+                                <div class="progress">
+                                    <span class="common-progress" [ngStyle]="{'width' : '40%', 'background-color': '#388e3c'}"></span>
+                                </div>
+                            </li>
+                            <li class="progress-bar">
+                                <div class="progress">
+                                    <span class="common-progress" [ngStyle]="{'width' : '30%', 'background-color': '#ff9f00'}"></span>
+                                </div>
+                            </li>
+                            <li class="progress-bar">
+                                <div class="progress">
+                                    <span class="common-progress" [ngStyle]="{'width' : '10%', 'background-color': '#ff6161'}"></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="reviews-container">
+                            <li class="reviews-count">7,512</li>
+                            <li class="reviews-count">2,112</li>
+                            <li class="reviews-count">1,024</li>
+                            <li class="reviews-count">432</li>
+                            <li class="reviews-count">417</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="review-content">
+                    <ng-container *ngFor="let val of reviews">
+                        <div class="review-card">
+                        <div class="rating-date">
+                            <div>
+                                <span class="fa fa-star checked-orange"></span>
+                                <span class="fa fa-star checked-orange"></span>
+                                <span class="fa fa-star checked-orange"></span>
+                                <span class="fa fa-star checked-orange"></span>
+                                <span class="fa fa-star checked-orange"></span>
+                            </div>
+                            <div class="review-date">12th Jan 2024</div>
+                        </div>
+                        <div>
+                            <div class="user-div">
+                                <div class="user-icon">
+                                    <img src="assets\images\user.svg" style="width: 24px; height: 24px;">
+                                </div>
+                                <span class="user-text">Tarun</span>
+                            </div>
+                            <div class="review-description">
+                                Tasty is excellent 💯
+                            </div>
+                        </div>
+                    </div>
+                    </ng-container>
+                </div>
+            </div>
         </div>
     </div>
 </div>

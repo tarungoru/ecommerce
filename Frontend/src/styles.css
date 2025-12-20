@@ -5,3 +5,10 @@
 body {
     margin: 0;
 }
+
+
+:root {
+    --colorBorder: #e0e0e0;
+    --primary-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Outfit', sans-serif;
+}
