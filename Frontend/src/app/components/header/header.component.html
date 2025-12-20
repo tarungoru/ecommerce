@@ -6,7 +6,7 @@
   </div>
   <div class="shop-categories">
     <ng-container *ngFor="let item of shopCategories">
-      <a class="header-text">{{item.title}}</a>
+      <a class="header-text" routerLink="/products" [queryParams]="{ category: item.link }">{{item.title}}</a>
     </ng-container>
   </div>
     <div class="search">

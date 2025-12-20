@@ -9,61 +9,61 @@ export class HeaderComponent {
   shopCategories: any[] = [
   {
     title: "Sweets",
-    link: "/categories/sweets",
+    link: "sweets",
     children: [
       {
         title: "Traditional Sweets",
-        link: "/categories/sweets/traditional"
+        link: "traditional"
       },
       {
         title: "Dry Fruit Sweets",
-        link: "/categories/sweets/dry-fruit"
+        link: "dry-fruit"
       },
       {
         title: "Milk-Based Sweets",
-        link: "/categories/sweets/milk"
+        link: "milk"
       },
       {
         title: "Bengali Sweets",
-        link: "/categories/sweets/bengali"
+        link: "bengali"
       }
     ]
   },
   {
     title: "Pickles",
-    link: "/categories/pickles",
+    link: "pickles",
     children: [
       {
         title: "Veg Pickles",
-        link: "/categories/pickles/veg"
+        link: "veg"
       },
       {
         title: "Non-Veg Pickles",
-        link: "/categories/pickles/non-veg"
+        link: "non-veg"
       }
     ]
   },
   {
-    title: "Podi's & Masalas",
-    link: "/categories/podis-masalas"
+    title: "Podi's and Masalas",
+    link: "podis-masalas"
   },
   {
     title: "Snacks",
-    link: "/categories/snacks",
+    link: "snacks",
     children: [
       {
         title: "Namkeen",
-        link: "/categories/snacks/namkeen"
+        link: "namkeen"
       },
       {
-        title: "Chips & Fryums",
-        link: "/categories/snacks/chips"
+        title: "Chips and Fryums",
+        link: "chips"
       }
     ]
   },
   {
     title: "Papads",
-    link: "/categories/papads"
+    link: "papads"
   }
 ];
 }

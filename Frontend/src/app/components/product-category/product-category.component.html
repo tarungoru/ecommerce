@@ -1,0 +1,40 @@
+<div class="main">
+    <div class="left-bar">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Categories
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <!-- <mat-slider
+                thumbLabel
+                tickInterval="1000"
+                min="1"
+                max="100000"></mat-slider> -->
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <div class="right-bar">
+        <div class="grid-container">
+            <ng-container *ngFor="let product of products">
+                <div [routerLink]="['/products-view', category, product.slug]" class="product-card">
+                    <img [src]="product.image" class="image"/>
+                    <div class="product-description">
+                        <span class="product-text">{{product.name}}</span>
+                        <span class="price-text">₹{{product.price}}
+                            <span class="discount-text">₹999</span>
+                        </span>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

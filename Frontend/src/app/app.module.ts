@@ -14,6 +14,10 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { ViewProductComponent } from './components/view-product/view-product.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSliderModule} from '@angular/material/slider';
+import { ProductCategoryComponent } from './components/product-category/product-category.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     MainPageComponent,
     ViewProductComponent,
     ContactUsComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ProductCategoryComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     MatButtonModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatExpansionModule,
+    MatSliderModule
   ],
   providers: [
     provideClientHydration()
