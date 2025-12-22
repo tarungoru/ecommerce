@@ -1,1 +1,40 @@
-<p>cart-page works!</p>
+<div class="main">
+    <div class="main-wrapper">
+        <h1 class="header-text">Shopping Cart</h1>
+        <table class="table">
+            <thead>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th style="text-align: right;">Total</th>
+            </thead>
+            <tbody>
+                <td>
+                    <div class="image-card">
+                        <div class="image-wrapper">
+                            <img src="https://res.cloudinary.com/domh7dyrw/image/upload/v1766069849/nuvvula-karam_gstpqw.webp" alt="" class="image">
+                        </div>
+                        <div class="image-content">
+                            <div>Nuvvula Karam</div>
+                            <div>Weight: <span>100g</span></div>
+                        </div>
+                    </div>
+                </td>
+                <td>₹1200</td>
+                <td>
+                    <div class="add-remove-container">
+                        <div class="common-btn" (click)="decrementQuantity()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><title>Minus</title><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                        <input class="input-btn" type="text" [(ngModel)]="quantity"/>
+                        <div class="common-btn" (click)="incrementQuantity()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><title>Plus</title><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+                    </div>
+                </td>
+                <td style="text-align: right;">₹1200</td>
+            </tbody>
+        </table>
+
+        <div>
+            <h2 class="header-text" style="text-align: end;">Subtotal: Rs. 1,326.00</h2>
+        </div>
+        <div class="checkout-btn">Proceed to Checkout</div>
+    </div>
+</div>

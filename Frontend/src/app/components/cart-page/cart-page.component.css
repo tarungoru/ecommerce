@@ -1,0 +1,123 @@
+.main {
+    width: 100%;
+    height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-text {
+    color: #000;
+    font-family: var(--primary-font);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0px 40px;
+    margin: 0px 20px;
+}
+
+.table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    font-family: var(--primary-font);
+    color: #000;
+    font-size: 16px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 10px;
+}
+
+td {
+    font-family: var(--primary-font);
+    padding: 40px 0px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.add-remove-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+.common-btn {
+    color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dddede;
+    border-radius: 0;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    line-height: 38px;
+    transition: color .1s, border-color .1s, opacity .1s;
+    cursor: pointer;
+}
+
+.common-btn:hover, .input-btn:hover {
+    border: 1px solid #404040;
+    color: #000;
+}
+
+.input-btn {
+    width: 40px;
+    padding: 0;
+    height: 40px;
+    font-size: 13px;
+    color: #404040;
+    border: 1px solid #dddede;
+    border-radius: 0;
+    text-align: center;
+    outline: 0;
+}
+
+.quantity-text {
+    font-size: 16px;
+    font-family: var(--primary-font);
+}
+
+.image-content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+.image-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.image-wrapper {
+    width: 130px;
+    height: auto;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.checkout-btn {
+    padding: 10px 20px;
+    background-color: #212121;
+    width: fit-content;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.checkout-btn:hover {
+    background-color: red;
+}

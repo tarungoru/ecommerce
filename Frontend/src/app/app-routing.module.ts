@@ -9,8 +9,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 
 const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' }, 
-  { path: 'cart', component: CartPageComponent },
   { path: '', component: MainPageComponent }, 
+  { path: 'cart', component: CartPageComponent },
   { path: 'view', component: ViewProductComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'products', component: ProductCategoryComponent },

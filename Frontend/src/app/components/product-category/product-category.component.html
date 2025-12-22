@@ -1,17 +1,48 @@
 <div class="main">
-    <div class="left-bar">
+    <div class="main-wrapper">
+        <div class="left-bar">
+        <div class="filter-section" *ngIf="filterList.length !== 0">
+            <div class="filter-header">
+                <span>
+                    <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, -1, 0, 0)rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier" class="st-fill-none"><path d="M5 12L5 4" stroke="#787a7c" stroke-linecap="round"></path> <path d="M19 20L19 17" stroke="#787a7c" stroke-linecap="round"></path> <path d="M5 20L5 16" stroke="#787a7c" stroke-linecap="round"></path> <path d="M19 13L19 4" stroke="#787a7c" stroke-linecap="round"></path> <path d="M12 7L12 4" stroke="#787a7c" stroke-linecap="round"></path> <path d="M12 20L12 11" stroke="#787a7c" stroke-linecap="round"></path> <circle cx="5" cy="14" r="2" stroke="#787a7c" stroke-linecap="round"></circle> <circle cx="12" cy="9" r="2" stroke="#787a7c" stroke-linecap="round"></circle> <circle cx="19" cy="15" r="2" stroke="#787a7c" stroke-linecap="round"></circle></g></svg>
+                </span>
+                <span class="filter-text">Filters</span>
+                <span class="clear-all" (click)="filterList = []; form.reset()">Clear All</span>
+            </div>
+            <div class="chips-section">
+                <ng-container *ngFor="let chip of filterList">
+                    <div class="chip">{{chip}}<span style="margin-left: 5px;">✕</span> </div>
+                </ng-container>
+            </div>
+        </div>
         <mat-accordion>
             <mat-expansion-panel>
-                <mat-expansion-panel-header>
+                <mat-expansion-panel-header style="height: 40px;">
                     <mat-panel-title>
-                        Categories
+                        Price
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <!-- <mat-slider
-                thumbLabel
-                tickInterval="1000"
-                min="1"
-                max="100000"></mat-slider> -->
+                <form [formGroup]="form">
+                    <label for="75to150" class="common-text-container">
+                        <input formControlName="price75_150"  type="checkbox" id="75to150" (click)="addFilter('From ₹75 to ₹150')"/>
+                        <span class="label-text">From ₹75 to ₹150</span>
+                    </label>
+                    <label for="151to300" class="common-text-container">
+                        <input formControlName="price151_300"  type="checkbox" id="151to300" (click)="addFilter('From ₹151 to ₹300')"/>
+                        <span for="151to300" class="label-text">From ₹151 to ₹300</span>
+                    </label>
+                    <label for="301to500" class="common-text-container">
+                        <input formControlName="price301_500"  type="checkbox" id="301to500" (click)="addFilter('From ₹301 to ₹500')"/>
+                        <span for="301to500" class="label-text">From ₹301 to ₹500</span>
+                    </label>
+                </form>  
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header style="height: 40px;">
+                    <mat-panel-title>
+                        Avaliability
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
             </mat-expansion-panel>
         </mat-accordion>
     </div>
@@ -36,5 +67,6 @@
                 </div>
             </ng-container>
         </div>
+    </div>
     </div>
 </div>

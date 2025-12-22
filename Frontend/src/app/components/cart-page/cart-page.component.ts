@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CartPageComponent {
 
+  quantity: number = 1;
+
+  incrementQuantity(): void {
+    this.quantity += 1;
+  }
+
+  decrementQuantity(): void {
+    if (this.quantity > 1) {
+      this.quantity -= 1;
+    }
+  }
 }

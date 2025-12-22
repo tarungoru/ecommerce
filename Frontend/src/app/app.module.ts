@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -40,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MatInputModule,
     MatFormFieldModule,
     MatExpansionModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
