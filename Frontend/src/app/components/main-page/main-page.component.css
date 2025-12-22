@@ -1,0 +1,148 @@
+* {
+    user-select: none;
+}
+
+.main-page {
+    width: 100%;
+    height: calc(100% - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.view-all-btn {
+    color: #fff;
+    width: fit-content;
+    padding: 10px 20px;
+    font-family: var(--primary-font);
+    font-size: 18px;
+    text-align: center;
+    background: #000;
+    margin: 30px auto;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.categories {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 330px));
+    gap: 20px;
+}
+
+.category-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-title {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 700;
+    color: #171717;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.header-text {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    color: #171717;
+    margin: 50px 0px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.paragraph-text {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #171717;
+    text-align: center;
+    width: 60%;
+}
+
+.category-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.inner-card {
+    padding: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.user-image {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.prev svg,.next svg {
+    width: 80px;
+    height: 80px;
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: .6;
+    opacity: 0.75;
+}
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.header-paragraph-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

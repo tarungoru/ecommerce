@@ -1,0 +1,40 @@
+<div class="main-page">
+    <div class="main-wrapper">
+        <div class="image-slider">
+            <span (click)="previousImage()" class="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><title>Left</title><polyline points="15 18 9 12 15 6"></polyline></svg></span>
+            <img [src]="getImagePath(imageNames[currentImageIndex])" class="user-image"/>
+            <span (click)="nextImage()" class="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><title>Right</title><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </span>
+        </div>
+        <div>
+            <h2 class="header-text">Featured Categories</h2>
+            <div class="categories">
+                <div class="category-card" *ngFor="let item of shopCategories">
+                    <a routerLink="/products" [queryParams]="{ category: item.link }" class="inner-card">
+                        <img [src]="item.image" alt="{{item.title}}" class="category-image"/>
+                         <div class="category-title">{{item.title}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-paragraph-section">
+            <h2 class="header-text">Amamma’s Legacy of 25 Years</h2>
+            <span class="paragraph-text">If you’re craving sweets, your spice buds are tingling, or you’re longing for authentic pickles and podis, look no further. Made with the traditional recipe of our Ammamma from Guntur, with the perfect blend of ingredients and served with love, we bring you one-stop shop for sweets, snacks, pickles, and podis!</span>
+        </div>
+
+        <div>
+            <ng-container *ngFor="let category of shopCategories">
+                <h2 class="header-text">{{category.title}}</h2>
+                <div class="categories">
+                    <div class="category-card" *ngFor="let item of productCategories">
+                        <a [routerLink]="['/products-view', category.link, item.slug]" class="inner-card">
+                            <img [src]="item.image" alt="{{item.name}}" class="category-image"/>
+                            <div class="category-title">{{item.name}}</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="view-all-btn" routerLink="/products" [queryParams]="{ category: category.link }">View ALL</div>
+            </ng-container>
+        </div>
+</div>

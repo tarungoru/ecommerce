@@ -12,12 +12,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { ViewProductComponent } from './components/view-product/view-product.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSliderModule} from '@angular/material/slider';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +26,10 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     CartPageComponent,
     MainPageComponent,
     ViewProductComponent,
-    ContactUsComponent,
     LoginPageComponent,
     ProductCategoryComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
