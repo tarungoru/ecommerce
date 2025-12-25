@@ -18,6 +18,8 @@ import {MatSliderModule} from '@angular/material/slider';
 import { ProductCategoryComponent } from './components/product-category/product-category.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {MatSelectModule} from '@angular/material/select';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginPageComponent,
     ProductCategoryComponent,
     ProductDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MatFormFieldModule,
     MatExpansionModule,
     MatSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [
     provideClientHydration()

@@ -1,6 +1,6 @@
 <div class="main">
     <div class="main-wrapper">
-        <form class="login-card">
+        <form class="login-card" *ngIf="!registerMode">
             <div class="login-text">Login</div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -12,7 +12,26 @@
             </div>
             <div class="form-group">
                 <button type="submit" class="login-button">Sign In</button>
+                <button type="button" class="register-button" (click)="registerMode = true;">Register</button>
+            </div>
+        </form>
+        <form class="login-card" *ngIf="registerMode" [formGroup]="registerForm">
+            <div class="login-text">Register</div>
+            <div class="form-group">
+                <label for="name">User Name</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-group">
                 <button type="button" class="register-button">Register</button>
+                <button type="button" class="login-button" (click)="registerMode = false;">Back to Login</button>
             </div>
         </form>
     </div>
