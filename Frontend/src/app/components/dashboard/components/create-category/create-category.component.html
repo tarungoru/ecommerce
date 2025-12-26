@@ -1,0 +1,18 @@
+<div class="main">
+    <div class="header">Create Category</div>
+    <div class="content">
+        <div class="input-form">
+            <div class="common-label">Category Name</div>
+            <div class="w-full max-w-sm min-w-[200px]">
+                <input type="text" [(ngModel)]="category" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Enter Category Name" />
+            </div>
+        </div>
+        <div>
+            <button class="middle none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle 
+        font-sans text-xs font-bold uppercase text-white shadow-md 
+        shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 
+        focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none 
+        disabled:opacity-50 disabled:shadow-none" data-ripple-light="true" (click)="createCategory()">Create</button>
+        </div>
+    </div>
+</div>

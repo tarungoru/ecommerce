@@ -1,0 +1,64 @@
+<div class="main">
+    <div class="header">Create Product</div>
+    <div class="content">
+        <form [formGroup]="productForm" class="form">
+            <div class="common-form">
+                <div class="input-form">
+                    <div class="common-label">Name</div>
+                    <div class="w-full">
+                        <input formControlName="name" type="text"
+                            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                            placeholder="Enter Name" />
+                    </div>
+                </div>
+                <div class="input-form">
+                    <div class="common-label">Category Name</div>
+                    <div class="w-full">
+                        <input list="categoryList" formControlName="category" placeholder="Select Category" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm
+                    border border-slate-200 rounded-md px-3 py-3
+                    transition duration-300 ease
+                    focus:outline-none focus:border-slate-400
+                    hover:border-slate-300 shadow-sm focus:shadow" />
+                        <datalist id="categoryList">
+                            <ng-container *ngFor="let category of categories">
+                                <option value="{{category.name}}">
+                                    {{category.name}}</option>
+                            </ng-container>
+                        </datalist>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="common-form">
+                <div class="input-form">
+                    <div class="common-label">Price</div>
+                    <div style="width: 50%;">
+                        <input formControlName="price" type="number"
+                            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                            placeholder="Enter Price" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-form">
+                <div class="common-label">Description</div>
+                <div class="w-full">
+                    <textarea formControlName="description" placeholder="Enter Description" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm
+         border border-slate-200 rounded-md px-3 py-3 transition duration-300
+         focus:outline-none focus:border-slate-400 hover:border-slate-300
+         shadow-sm focus:shadow"></textarea>
+                </div>
+            </div>
+        </form>
+        <div>
+            <button class="middle none rounded-lg bg-gray-900 py-3 px-6 text-center align-middle 
+            font-sans text-xs font-bold uppercase text-white shadow-md 
+            shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 
+            focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none 
+            disabled:opacity-50 disabled:shadow-none cursor-pointer" data-ripple-light="true" (click)="createProduct()">
+                Create
+            </button>
+        </div>
+    </div>
+</div>

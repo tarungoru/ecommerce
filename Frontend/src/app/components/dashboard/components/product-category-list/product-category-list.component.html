@@ -1,0 +1,62 @@
+<div class="main">
+    <div class="main-wrapper">
+        <div class="header">
+            <a routerLink="/dashboard/create-category" class="inline-block cursor-pointer items-center justify-center rounded-xl border-[1.58px] border-zinc-600 bg-zinc-950 px-5 py-3 font-medium text-slate-200 hover:shadow-xl">
+                Create Category
+            </a>
+        </div>
+        <div class="">
+            search Criteria
+        </div>
+        <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+            <table class="w-full text-sm text-left rtl:text-right text-body">
+                <thead class="text-sm text-body bg-neutral-secondary-medium border-b border-default-medium">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            Id
+                        </th>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            Status
+                        </th>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            CreatedAt
+                        </th>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            ModifiedAt
+                        </th>
+                        <th scope="col" class="px-6 py-3 font-bold">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-neutral-primary-soft border-b border-default hover:bg-neutral-secondary-medium"
+                     *ngFor="let category of categoryList">
+                        <th scope="row" class="px-6 py-4 font-medium text-heading whitespace-nowrap">
+                            {{category.id}}
+                        </th>
+                        <td class="px-6 py-4">
+                            {{category.name}}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{category.status}}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{category.createdAt}}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{category.modifiedAt}}
+                        </td>
+                        <td class="flex items-center px-6 py-4">
+                            <a href="#" style="margin-right: 10px;" class="text-white bg-gray-600 font-medium text-fg-brand p-2 rounded">Edit</a>
+                            <a href="#" class="text-white bg-red-600 font-medium text-danger p-2 rounded">Remove</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

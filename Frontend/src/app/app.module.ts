@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +19,17 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { FooterComponent } from './components/footer/footer.component';
 import {MatSelectModule} from '@angular/material/select';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { OrderListComponent } from './components/dashboard/components/order-list/order-list.component';
+import { ProductCategoryListComponent } from './components/dashboard/components/product-category-list/product-category-list.component';
+import { ProductListComponent } from './components/dashboard/components/product-list/product-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator } from "@angular/material/paginator";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CreateCategoryComponent } from './components/dashboard/components/create-category/create-category.component';
+import { CommonDashboardService } from './components/dashboard/common-dashboard.service';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateProductComponent } from './components/dashboard/components/create-product/create-product.component';
+import { ImageManagerComponent } from './components/dashboard/dialogs/image-manager/image-manager.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +43,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ProductDetailsComponent,
     FooterComponent,
     DashboardComponent,
+    OrderListComponent,
+    ProductCategoryListComponent,
+    ProductListComponent,
+    CreateCategoryComponent,
+    CreateProductComponent,
+    ImageManagerComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,8 +62,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatSliderModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatSelectModule
-  ],
+    MatSelectModule,
+    MatTableModule,
+    MatPaginator,
+    MatSnackBarModule,
+    HttpClientModule
+],
   providers: [
     provideClientHydration()
   ],
