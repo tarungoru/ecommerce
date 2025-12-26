@@ -37,7 +37,7 @@ export class ProductListComponent implements OnInit {
 
     dialog.afterClosed().subscribe((result:any) => {
       if (result) {
-        
+
       }
     });
   }

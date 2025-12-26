@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { range } from 'rxjs';
 
 @Component({
   selector: 'app-product-details',

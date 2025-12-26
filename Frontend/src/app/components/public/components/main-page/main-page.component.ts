@@ -1,6 +1,6 @@
 import { AfterViewInit, Component} from '@angular/core';
-import { mainPageCategories, products } from '../../data';
-import { shopCategories } from '../../data';
+import { mainPageCategories, products } from '../../../../data';
+import { shopCategories } from '../../../../data';
 
 @Component({
   selector: 'app-main-page',

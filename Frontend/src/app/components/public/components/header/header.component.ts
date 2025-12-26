@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { shopCategories } from '../../data';
+import { shopCategories } from '../../../../data';
 import { link } from 'fs';
 
 @Component({
