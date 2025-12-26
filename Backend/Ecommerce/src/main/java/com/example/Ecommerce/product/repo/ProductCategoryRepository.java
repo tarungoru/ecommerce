@@ -1,4 +1,7 @@
 package com.example.Ecommerce.product.repo;
 
-public interface ProductCategoryRepository {
+import com.example.Ecommerce.product.entity.ProductCategoryEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductCategoryRepository extends JpaRepository<ProductCategoryEntity, Integer> {
 }

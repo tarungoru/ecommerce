@@ -1,16 +1,18 @@
 package com.example.Ecommerce.product.dto;
 
+import com.example.Ecommerce.Enum.Status;
+import com.example.Ecommerce.audit.bean.Audit;
 import lombok.Data;
 
 
 @Data
-public class ProductDto {
+public class Product extends Audit {
 
     private Integer id;
     private String name;
-    private Integer quantity;
-    private Integer stockQuantity;
+    private String description;
+    private String imageUrl;
+    private Status status;
     private Integer price;
-    private Integer priceAfterDiscount;
-    private Integer categoryId;
+    private ProductCategory productCategory;
 }

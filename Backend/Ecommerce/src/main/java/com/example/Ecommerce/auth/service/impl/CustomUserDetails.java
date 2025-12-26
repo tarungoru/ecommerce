@@ -1,4 +1,8 @@
 package com.example.Ecommerce.auth.service.impl;
 
-public class CustomUserDetails {
+import com.example.Ecommerce.auth.service.UserDetailsService;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CustomUserDetails implements UserDetailsService {
 }

@@ -1,45 +1,29 @@
-package com.example.Ecommerce.main.entity;
+package com.example.Ecommerce.product.entity;
 
+import com.example.Ecommerce.Enum.Status;
+import com.example.Ecommerce.audit.Entity.AuditEntity;
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import lombok.Data;
 
-import java.time.LocalDateTime;
-
-public class ProductEntity {
+@Entity(name = "product")
+@Data
+public class ProductEntity extends AuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false, unique = true)
-    private String sku;
-
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
 
-    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
     private Integer price;
 
-    private Integer discountPrice;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private ProductCategoryEntity category;
 
-    private Integer stockQuantity;
-
-    private Boolean isActive = true;
-
-//    @ManyToOne
-//    @JoinColumn(name = "category_id")
-//    private Category category;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "brand_id")
-//    private Brand brand;
-
-    @CreationTimestamp
-    private LocalDateTime createdAt;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
 }
